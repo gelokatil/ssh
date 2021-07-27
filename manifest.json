@@ -5,4 +5,5 @@
     "dependencies": [],
     "codeowners": ["@ejonesnospam"],
     "requirements": ["paramiko==2.6.0"]
+    "version": "1.0.0"
   }
