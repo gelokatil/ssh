@@ -70,6 +70,7 @@ class SSHSensor(Entity):
         self._command = config.get(CONF_COMMAND)
         self._value_template = config.get(CONF_VALUE_TEMPLATE)
         self._unit_of_measurement = config.get(CONF_UNIT_OF_MEASUREMENT)
+        self._state = None
         self._ssh = None
         self._connected = False
         self._connect()
