@@ -1,7 +1,7 @@
 # sensor.ssh
 Generic SSH based sensor and switch for Home Assistant
 
-- Tested and verified using Home Assistant 0.103.6
+- (Only sensor) Tested and verified using Home Assistant 2021.7.4
 
 
 Sensor:
@@ -57,6 +57,16 @@ switch:
 NOTE: Above Switch example will always indicate off, since status command's return value will equal 'off'
 
 ```
+
+NOTE: To obtain the ssh key, you can run the following command in a linux shell and use the rsa hash in the key parameter.  
+
+```yawl
+ssh-keyscan 192.168.1.10
+
+192.168.1.10 ssh-rsa AAAAB3ZzaC1yc2EAAAADAQABAAABAQCvBLTLoH3eBXxgLj59XbMtJnOckGKBKgPy2+cVMIroDvX7uH3QUyL84fD43/7OmeNPzlwDfK83rqpLBTpuOiZaa6d5u4oFd0gDegLkOz3G7mg0g/+JLckqvHI8u2Xs3P1DZzUpx0y0cP7cjYeVxjLFDLKPU4HrXuRLBNqwtOFqVoEX8GuJPEXXFtJUkgEpllHC1ZJ+RwYRjj5KIHKondzT7pCDgMafCTPBlLZUHfV+HQenYiQusBlOHTMvydV4FOGVTPzGvrQS8OuO1mcT6lafsssMWOS5HbHqmEGqhkSNxpyf4t24k6IAP2xcOfsllPQ66J0a4pMdcB4DjC3ll28f
+```
+
+
 ### Configuration Variables
 
 **name**
@@ -106,3 +116,4 @@ The sensor utilizes a paramiko client, a python implementation of the ssh v2 lib
 
 A sensor value can only by a maximum of 256 characters in length, therefore make use of the value_template to parse data larger than this.
 
+Credits to @ejonesnospam and @jchasey
