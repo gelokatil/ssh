@@ -39,12 +39,12 @@ MIN_TIME_BETWEEN_UPDATES = timedelta(seconds=30)
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
     vol.Optional(CONF_NAME, default=DEFAULT_NAME): cv.string,
     vol.Required(CONF_HOST): cv.string,
-    vol.Required(CONF_KEY): cv.string,
+    vol.Optional(CONF_KEY): cv.string,
     vol.Required(CONF_PASSWORD): cv.string,
     vol.Required(CONF_USERNAME): cv.string,
     vol.Optional(CONF_PORT, default=DEFAULT_SSH_PORT): cv.port,
     vol.Required(CONF_COMMAND): cv.string,
-    vol.Required(CONF_UNIT_OF_MEASUREMENT): cv.string,
+    vol.Optional(CONF_UNIT_OF_MEASUREMENT): cv.string,
     vol.Optional(CONF_VALUE_TEMPLATE): cv.template,
 })
 
